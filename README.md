@@ -6,6 +6,8 @@ So, let's build a web application, that we can use to search for movies and disp
 
 ## Design / User flow
 
+Full flow can get here: https://xd.adobe.com/view/0b6f9418-1224-418c-b1bb-7fad2462bbe1-5e3c/
+
 ### Home page
 
 This is the home page of the app. With whatever you like to name this application and a search box.
