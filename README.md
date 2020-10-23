@@ -18,6 +18,11 @@ Use the below command to spawn a local dev server and run the app.
 npm run dev-server
 ```
 
+## Possible Improvements
+1. Write tests for the views, components, actions, reducers
+2. Better styling of the UI
+3. Replace redux with hooks and context api
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

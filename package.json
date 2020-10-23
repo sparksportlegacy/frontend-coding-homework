@@ -6,9 +6,7 @@
   "scripts": {
     "start": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "dev-server": "webpack serve",
-    "test": "jest --config ./jest.config.json",
-    "test:watch": "npm run test -- --watch"
+    "dev-server": "webpack serve"
   },
   "repository": {
     "type": "git",
