@@ -1,7 +1,28 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import Search from "./views/Search/index";
+import Detail from "./views/Detail/index";
+
 import "./styles/styles.scss";
 
-const template = <p>Hello from react</p>;
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { SiteHeading } from "./constants/messages";
 
-ReactDOM.render(template, document.getElementById("root"));
+function App() {
+  return (
+    <Router>
+      <div data-test="appComponent" className="app">
+        <Switch>
+          <Route path="/" exact component={Search} />
+          <Route
+            path="/movies/:movieId/detail"
+            render={(props) => {
+              return <Detail {...props}></Detail>;
+            }}
+          />
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

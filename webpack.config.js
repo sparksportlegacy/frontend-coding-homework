@@ -1,7 +1,18 @@
 const path = require("path");
+const webpack = require("webpack");
+const dotenv = require("dotenv");
+
+// call dotenv and it will return an Object with a parsed key
+const env = dotenv.config().parsed;
+
+// reduce it to a nice object, the same as before
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 module.exports = {
-  entry: "./src/App.js",
+  entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "public"),
     filename: "bundle.js",
@@ -23,4 +34,5 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "public"),
   },
+  plugins: [new webpack.DefinePlugin(envKeys)],
 };
