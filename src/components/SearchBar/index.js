@@ -5,6 +5,7 @@ const SearchBar = (props) => {
     <div className="search-bar">
       <input
         type="text"
+        name="search"
         placeHolder={props.placeholder}
         value={props.criteria}
         onChange={props.handleChange}
