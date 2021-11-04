@@ -4,6 +4,8 @@ Hi there! This is a simple coding test from Spark Sport. We like you! And we wou
 
 So, let's build a web application, that we can use to search for movies and display the detail of the movie!
 
+This test should be completed using ReactJS and ideally Redux (but not compulsary).
+
 ## Design / User flow
 
 Full flow can get here: https://xd.adobe.com/view/0b6f9418-1224-418c-b1bb-7fad2462bbe1-5e3c/
@@ -42,8 +44,7 @@ _If you have problem with API setup, local static data demo is also acceptable_
 
 ## Some kind tips
 
-- We don't expect you to use any specific tech stack in this test, you can choose whatever you like, even vanilla js, this also helps us to understand your strength.
 - We favour unit tested code, but not a must-have
 - Don't forget to create/update README to let us know how to set up and run your code.
-- You can fork this repo from GitHub and create your project in this repo.
+- You can branch this repo and complete work in your own branch.
 - No need to stress off, enjoy coding, be yourself and good luck!
