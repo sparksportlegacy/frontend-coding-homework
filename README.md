@@ -1,50 +1,39 @@
-# Coding Homework
+# Movie Search
 
-Hi there! This is a simple coding test from Spark Sport. We like you! And we would like to know more about you, now this stage you can demonstrate us your awesome coding skills! We writing code every day, now we want to know how you write code as well!
+This is a basic app for searching for movies using [The Movie DB API](https://developers.themoviedb.org/3/). It's built using React Typescript, with Redux state management, using MUI for the visuals. It was bootstrapped with create-react-app.
 
-So, let's build a web application, that we can use to search for movies and display the detail of the movie!
+# Running it
 
-This test should be completed using ReactJS and ideally Redux (but not compulsary).
+You must have npm installed. First, change your directory to `/movie-browser` and install dependancies:
 
-## Design / User flow
+`npm i`
 
-Full flow can get here: https://xd.adobe.com/view/0b6f9418-1224-418c-b1bb-7fad2462bbe1-5e3c/
+Then, run the app, use npm to start the development server: 
 
-### Home page
+`npm run start`
 
-This is the home page of the app. With whatever you like to name this application and a search box.
+To run the tests, run
 
-![home page](./home_page.png)
+`npm run test`
 
-### Search function
+# Api Key
 
-When typing something in the search box, it will list related result like the autocomplete you saw in Google search or any other search.
+This app requires an API key to the Movie DB API, place this in the 
 
-No need to show all the results, probably just a few most related results should be enough.
+`/movie-browser/src/constants.ts` file.
 
-![search](./search_result.png)
+# Future development
 
-### Detail page
+There are many options for future development:
 
-Once you click a movie in the autocomplete drop-down list, will navigate you to the detail page, in this page, you might see the movie poster, title, actors etc. whatever other information you think you wish to have
+* Adding a back button from the details page
+* Better error handling for network requests
+* Inline CSS should be in `.scss` files instead
+* Linting can be used for better developer experience
+* If deploying this to the cloud, the API key should be in secrets management
+* More unit tests can be written (especially for the homepage)
 
-![detail page](./detail_page.png)
+## Bugs
 
-## API
-
-We suggest that you can use [The Movie DB API](https://developers.themoviedb.org/3/getting-started), and you might need to [register](https://www.themoviedb.org/login) and create an API key for it.
-
-For search the movie with text, you can use this endpoint: https://developers.themoviedb.org/3/search/search-movies
-
-For the detail of a movie, you can use this endpoint: https://developers.themoviedb.org/3/movies/get-movie-details
-
-An example of the API call will be like this: https://api.themoviedb.org/3/search/movie?query={key_word}?&api_key={api_key}
-
-_If you have problem with API setup, local static data demo is also acceptable_
-
-## Some kind tips
-
-- We favour unit tested code, but not a must-have
-- Don't forget to create/update README to let us know how to set up and run your code.
-- You can branch this repo and complete work in your own branch.
-- No need to stress off, enjoy coding, be yourself and good luck!
+* Sometimes fewer than 5 results display.
+* When searching for 2 movies of the same title, the app can crash.
